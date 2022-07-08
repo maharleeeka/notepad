@@ -21,13 +21,7 @@
         </style>
     </head>
     <body class="antialiased">
-        <div id="app">
-          <router-link to="/home">Home</router-link>
-          <router-link to="/about">About</router-link>
-          <hr>
-          <router-view></router-view>
-        </div>
+        <div id="app"></div>
         @vite('resources/js/app.js')
-        <!-- <script src="{{ asset('js/app.js') }}"></script> -->
     </body>
 </html>

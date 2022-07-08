@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.nav-items-wrapper {
+  display: flex;
+}
+
+.nav-item {
+  padding: 0 10px;
+}
+
+.form-wrapper {
+  margin: 200px auto;
+  width: 30%;
+  border: 3px solid rgb(47, 172, 150);
+  padding: 10px;
+}
+
+.form-wrapper form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-wrapper button {
+  background-color: rgb(47, 172, 150);
+}
