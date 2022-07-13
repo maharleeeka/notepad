@@ -1,6 +1,8 @@
 import './bootstrap';
 import '../css/app.css';
 import { createApp } from 'vue';
+import VueAxios from 'vue-axios';
+import axios from 'axios';
 import * as VueRouter from 'vue-router';
 
 import Main from './layouts/Main.vue';
@@ -21,4 +23,5 @@ const router = VueRouter.createRouter({
 
 const app = createApp(Main)
 app.use(router);
+app.use(VueAxios, axios);
 app.mount('#app')
