@@ -93,6 +93,14 @@ export default {
     const createNote = async() => {
       await addNote({...form});
       await getNotes();
+      resetForm();
+    }
+
+    const resetForm = () => {
+      Object.assign(form, {
+      title: '',
+      description: ''
+    })
     }
     return {
       form,
