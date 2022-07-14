@@ -1,5 +1,6 @@
 <template>
-<div class="flex flex-col">
+<div class="flex flex-col mt-5">
+  <h1 class="font-medium text-5xl mt-0 mb-2 text-green-600" style="color: #2FAC96">Hello {{ name }}!</h1>
   <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
     <div class="py-2 inline-block min-w-full sm:px-6 lg:px-8">
       <div class="overflow-hidden">
@@ -29,7 +30,7 @@
                 </td>
                 <td class="text-sm text-gray-900 font-light px-6 py-4 whitespace-nowrap">
                   <router-link
-                    :to="{ name: 'notes.view', params: { id: note.id } }"
+                    :to="{ name: 'note-item.view', params: { id: note.id } }"
                     class="mr-4 inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out"
                   >Edit</router-link>
                   <button 
@@ -69,10 +70,13 @@
 </template>
 <script>
 import useNotes from "../composables/notes";
+import { useUserStore } from "../../store/useUser";
+
 import { onMounted, reactive } from "vue";
 export default {
   setup () {
     const { notes, getNotes, destroyNote, addNote } = useNotes()
+    const userStore = useUserStore();
 
     onMounted(getNotes);
     
@@ -94,7 +98,8 @@ export default {
       form,
       notes,
       deleteNote,
-      createNote
+      createNote,
+      name: userStore.userName
     }
   }
 }
