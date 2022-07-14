@@ -73,9 +73,8 @@ class NoteController extends Controller
      * @param  \App\Models\Note  $note
      * @return \Illuminate\Http\Response
      */
-    public function update(Note $request, Note $note)
+    public function update(NoteRequest $request, Note $note)
     {
-        //
         $note->update($request->validated());
 
         return new NoteResource($note);
