@@ -25,7 +25,7 @@ class NoteRequest extends FormRequest
     {
         return [
             'title' => ['required'],
-            'description' => ['string'],
+            'description' => ['nullable'],
         ];
     }
 }
