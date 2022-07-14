@@ -15,7 +15,7 @@
           <router-link to="/about" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white" >About</router-link>
         </div>
         <div class="nav-item">
-          <router-link to="/home" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white" >Home</router-link>
+          <router-link to="/notes" class="block mt-4 lg:inline-block lg:mt-0 text-teal-200 hover:text-white" >Notes</router-link>
         </div>
       </div>
     </div>
